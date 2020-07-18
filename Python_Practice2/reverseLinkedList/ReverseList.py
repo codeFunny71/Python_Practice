@@ -38,11 +38,12 @@ class LinkedList:
     def printList(self):
         temp = self.head
         while temp:
-            print(str(temp.data), end=", ")
+            print(str(temp.data), end=" ")
             temp = temp.next
 
+
 # Driver program to test above functions
-if __name__=='__main__':
+if __name__ == '__main__':
     llist = LinkedList()
     llist.push(20)
     llist.push(4)
@@ -54,9 +55,3 @@ if __name__=='__main__':
     llist.reverse()
     print("\nReversed Linked List")
     llist.printList()
-
-
-
-
-
-
