@@ -2,7 +2,10 @@
 # Time Complexity : O(n) 
 # Space Complexity : O(1) 
 
-# Node class 
+# Node class
+from typing import List
+
+
 class Node:
 
     # Constructor to initialize the node object
@@ -42,8 +45,21 @@ class LinkedList:
             temp = temp.next
 
 
+class Solution:
+    def running_sum(self, nums: List[int]) -> List[int]:
+        solution = []
+        j = 0
+        for i in nums:
+            j += i
+            solution.append(j)
+        return solution
+
+
 # Driver program to test above functions
 if __name__ == '__main__':
+    test = Solution()
+    list2 = [1, 2, 3, 4, 5]
+    listResult = test.running_sum(list2)
     llist = LinkedList()
     llist.push(20)
     llist.push(4)
@@ -55,3 +71,5 @@ if __name__ == '__main__':
     llist.reverse()
     print("\nReversed Linked List")
     llist.printList()
+    print("\nRunning total")
+    print(str(listResult)[1:-1])
